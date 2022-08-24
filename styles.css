@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+:root {
+    /* ## Colors
+### Primary */
+--Light-Cyan: hsl(193, 38%, 86%);
+--Neon-Green: hsl(150, 100%, 66%);
+/* ### Neutral */
+--Grayish-Blue: hsl(217, 19%, 38%);
+--Dark-Grayish-Blue: hsl(217, 19%, 24%);
+--Dark-Blue: hsl(218, 23%, 16%);
+}
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 10vh 0 10vh 0;
+    background-color: var(--Dark-Blue)
+}
+.wrapper {
+    background-color: var(--Dark-Grayish-Blue);
+    width: 375px;
+    height: auto;
+    font-family: "Manrope";
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    
+}
+p {
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 10px;
+    padding: 2rem 0 1rem 0;
+}
+.advicetext {
+    color: var(--Light-Cyan);
+    font-weight: 800;
+    padding: 0 2.5rem 1rem 2.5rem;
+    text-align: center;
+
+}
+.advicetext::before {
+    content: open-quote;
+}
+.advicetext::after {
+    content: close-quote;
+}
+#pattern-divider-mobile{
+    background-color: transparent;
+}
+#submit {
+    background-color: var(--Neon-Green);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: relative;
+    top: 32.5px;
+}
+#submit:hover{
+    filter: brightness(110%);
+    box-shadow: 0 0 25px 0 var(--Neon-Green);
+    cursor: pointer;
+}
+#submit img {
+    background-color: transparent;
+}
+.shake {
+    animation: shake 0.5s;
+  
+    animation-iteration-count: 2;
+  }  
+@keyframes shake {
+    0%{
+        transform: translateX(4px) rotate(0deg);
+    }
+    25%{
+        transform: translateX(-4px) rotate(-10deg);
+    }
+    50%{
+        transform: translateX(4px) rotate(10deg);
+    }
+    75%{
+        transform: translateX(-4px) rotate(0deg);
+    }
+    100%{
+        transform: translateX(4px) rotate(10deg);
+    }
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    padding: 5rem;
+    color: var(--Neon-Green);
+    filter: brightness(50%);
+}
+.attribution a { 
+    color: var(--Light-Cyan); 
+}
